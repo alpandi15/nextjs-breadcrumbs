@@ -200,14 +200,14 @@ const Breadcrumbs = ({
         {!omitRootLabel && (
           <li style={inactiveItemStyle} className={inactiveItemClassName}>
             <Link href="/">
-              <a>
+              <>
                 {convertBreadcrumb(
                   rootLabel || 'Home',
                   labelsToUppercase,
                   replaceCharacterList,
                   transformLabel
                 )}
-              </a>
+              </>
             </Link>
           </li>
         )}
@@ -235,14 +235,14 @@ const Breadcrumbs = ({
                 }
               >
                 <Link href={breadcrumb.href}>
-                  <a>
+                  <>
                     {convertBreadcrumb(
                       breadcrumb.breadcrumb,
                       labelsToUppercase,
                       replaceCharacterList,
                       transformLabel
                     )}
-                  </a>
+                  </>
                 </Link>
               </li>
             );
